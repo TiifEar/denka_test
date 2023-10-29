@@ -10,12 +10,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./src/css/holiday.css" />
     <title>denka_coffee</title>
   </head>
   <body>
     <nav class="header" id="size">
       <div>
-        <h3 class="arabicaPrice">100% АРАБІКА +5 ГРН</h3>
+        <div class="arabicaCont">
+          <div>
+            <a
+              href="https://tiifear.github.io/Menu_idea/HALLOWEEN/halloween.html"
+              ><img src="./src/img/holiday/hallowen.png" alt=""
+            /></a>
+          </div>
+          <h3 class="arabicaPrice">100% АРАБІКА +5 ГРН</h3>
+          <div></div>
+        </div>
         <table class="tSize">
           <tr>
             <td class="mlSize">мл.</td>
@@ -420,8 +430,21 @@
         </tr>
       </table>
     </div>
-    <script src="script.js"></script>
+    <div class="annotation" id="annotation" onclick="hidd()">
+      <h2>Натисни</h2>
+      <img src="./src/img/holiday/arrow.png" alt="" />
+      <div class="zoom-in-out-box bord">
+        <a href="https://tiifear.github.io/Menu_idea/HALLOWEEN/halloween.html"
+          ><img
+            src="./src/img/holiday/hallowen.png"
+            alt=""
+            class="zoom-in-out-box"
+        /></a>
+      </div>
+    </div>
     <script>
+      const back = document.getElementById("annotation");
+
       window.onscroll = function () {
         myFunction();
       };
@@ -435,6 +458,10 @@
         } else {
           header.classList.remove("sticky");
         }
+      }
+      function hidd() {
+        document.body.style.overflowY = "scroll";
+        back.style.display = "none";
       }
     </script>
   </body>
